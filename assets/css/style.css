@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan:ital@0;1&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+.bg-black{
+    background: #000;
+}
+
+#crical{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    z-index: 9999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#heroArea{
+    width: 90%;
+    margin: 0 auto;
+    height: 100vh;
+    place-content: center;
+}
+
+.hero_area_content h1{
+    font-size: 13vw;
+    color: #fff;
+    opacity: .8;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.hero_area_content h1 .second_elm{
+    padding-left: 150px;
+}
+.desingerName{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color: #fff;
+    margin-top: 20px;
+}
+.desingerName p{
+    font-size: 14px;
+    line-height: 1.3;
+}
+.desingerName h3{
+    font-size: 16px;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+.hbcw{
+    width: 300px;
+}
+.bounding{
+    width: fit-content;
+    overflow: hidden;
+    display: block;
+}
+.boundingelam{
+    display: block;
+    transform: translateY(100%);
+}
+#teamArea{
+    width: 90%;
+    margin: 0 auto;
+    padding: 100px 0;
+    overflow: hidden;
+}
+.team_item{
+    position: relative;
+    border-top: 1px solid #a5a5a5;
+}
+.team_item h2{
+    color: #fff;
+    opacity: .8;
+    font-size: 10vw;
+    text-transform: uppercase;
+}
+
+.team_item img{
+    position: absolute;
+    width: 350px;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+}
+.team_item.active img{
+    opacity: 1;
+    visibility: visible;
+}
+.beforeElm{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+}
+
+
+#header {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+    opacity: 0;
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#header.active{
+    opacity: 1;
+}
+.header_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+.logo h3{
+    color: #fff;
+}
+.menu_icon svg{
+    color: #fff;
+    width: 30px;
+}
+
+
+/* responsive mobile device css */
+@media screen and (max-width: 768px){
+    .hero_area_content h1 .second_elm{
+        padding-left: 30px;
+    }
+
+    .team_item img{
+        width: 200px;
+    }
+
+}
+
+@media screen and (max-width: 450px){
+    .team_item img{
+        width: 100px;
+    }
+}
