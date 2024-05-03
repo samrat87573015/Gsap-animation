@@ -21,10 +21,13 @@ body{
     border-radius: 50%;
     background: #fff;
     position: absolute;
-    z-index: 9999;
+    z-index: 9;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+#crical.hidden{
+    display: none;
 }
 #heroArea{
     width: 90%;
@@ -98,7 +101,7 @@ body{
     opacity: 0;
     visibility: hidden;
 }
-.team_item.active img{
+.team_item:hover img{
     opacity: 1;
     visibility: visible;
 }

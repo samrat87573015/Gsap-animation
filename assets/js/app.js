@@ -22,6 +22,12 @@ function teamAnimation() {
 
   teamItem.forEach(function (el) {
 
+    const crical = document.getElementById("crical");
+
+    el.addEventListener("mouseenter", function () {
+      crical.classList.add("hidden");
+    });
+
     let beforeElem = el.querySelector('.beforeElm');
 
     beforeElem.addEventListener("mouseenter", function () {
@@ -36,6 +42,7 @@ function teamAnimation() {
 
     el.addEventListener("mouseleave", function () {
       el.classList.remove("active");
+      crical.classList.remove("hidden");
       const teamImg = this.querySelector("img");
       gsap.to(teamImg, {
         opacity: 0,
