@@ -1,7 +1,4 @@
-const scroll = new LocomotiveScroll({
-  el: document.querySelector("#main"),
-  smooth: true,
-});
+
 
 
 function headerAnimation() {
@@ -31,7 +28,6 @@ function teamAnimation() {
     let beforeElem = el.querySelector('.beforeElm');
 
     beforeElem.addEventListener("mouseenter", function () {
-      el.classList.add("active");
       const teamImg = this.querySelector("img");
       gsap.to(teamImg, {
         opacity: 1,
@@ -41,8 +37,6 @@ function teamAnimation() {
     })
 
     el.addEventListener("mouseleave", function () {
-      el.classList.remove("active");
-      crical.classList.remove("hidden");
       const teamImg = this.querySelector("img");
       gsap.to(teamImg, {
         opacity: 0,
@@ -55,7 +49,6 @@ function teamAnimation() {
     let diffrot = 0;
 
     el.addEventListener("mousemove", function (dets) {
-      el.classList.add("active");
       const teamImg = el.querySelector("img");
 
       const modiffclientY = dets.clientY - el.getBoundingClientRect().top;
@@ -77,15 +70,24 @@ function teamAnimation() {
 
 teamAnimation();
 
-const crical = document.getElementById("crical");
+// const crical = document.getElementById("crical");
 
-window.addEventListener("mousemove", function(dets){
-    gsap.to(crical, {
-        top: dets.clientY,
-        left: dets.clientX,
-    })
-})
+// window.addEventListener("mousemove", function(dets){
+//     gsap.to(crical, {
+//         top: dets.clientY,
+//         left: dets.clientX,
+//     })
+// })
 
+
+Shery.mouseFollower();
+
+Shery.makeMagnet(".magnet");
+
+Shery.hoverWithMediaCircle(".hover-circle" /* Element to target.*/, {
+  images: ["./assets/img/plug.png", "./assets/img/ixperience.png"] /*OR*/,
+  //videos: ["video1.mp4", "video2.mp4"],
+});
 
 
 gsap.to(".boundingelam", {
@@ -96,4 +98,9 @@ gsap.to(".boundingelam", {
 
 })
 
+
+const scroll = new LocomotiveScroll({
+  el: document.querySelector("#main"),
+  smooth: true,
+});
 
